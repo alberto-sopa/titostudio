@@ -89,7 +89,7 @@ export default function HomePage() {
             <div className="flex flex-col bg-[#00000040] mx-auto justify-center items-center sm:py-[140px] py-[80px] sm:px-6 px-[16px]">
               <h2
                 id="quote-title"
-                className="text-[22px] sm:text-[24px] text-white max-w-[680px] sm:text-center text-left"
+                className="text-[22px] sm:text-[24px] text-white max-w-[680px] sm:text-center text-lefttito"
               >
                 ¿Tienes una idea pero no sabes cómo convertirla en producto? En
                 Tito Studio te acompañamos desde la validación hasta tu MVP
@@ -102,7 +102,7 @@ export default function HomePage() {
         {/* CLIENTES */}
         <section id="clients" aria-labelledby="clients-title">
           <div className="py-[80px] sm:py-[160px] max-w-[1200px] w-full mx-auto grid grid-cols-12 gap-[24px] px-6 sm:px-0">
-            <div className="col-span-12 sm:col-span-4 text-[16px] font-medium">
+            <div className="col-span-12 sm:col-span-4 text-[16px] ">
               <h2 id="clients-title">Clientes</h2>
             </div>
             <div className="col-span-12 sm:col-span-8">
@@ -147,7 +147,7 @@ export default function HomePage() {
         {/* QUIÉNES SOMOS */}
         <section id="who-we-are" aria-labelledby="about-title">
           <div className="py-[80px] sm:py-[160px] max-w-[1200px] w-full mx-auto grid grid-cols-12 gap-[24px] px-6 sm:px-0">
-            <div className="col-span-12 sm:col-span-4 text-[16px] font-medium">
+            <div className="col-span-12 sm:col-span-4 text-[16px] ">
               <h2 id="about-title">Quiénes somos</h2>
             </div>
             <div className="col-span-12 sm:col-span-8">
@@ -163,7 +163,7 @@ export default function HomePage() {
         {/* POR QUÉ CON NOSOTROS */}
         <section id="services" aria-labelledby="why-title">
           <div className="py-[80px] sm:py-[160px] max-w-[1200px] w-full mx-auto grid grid-cols-12 gap-[24px] px-6 sm:px-0">
-            <div className="col-span-12 sm:col-span-4 text-[16px] font-medium">
+            <div className="col-span-12 sm:col-span-4 text-[16px] ">
               <h2 id="why-title">Por qué con nosotros</h2>
             </div>
             <div className="col-span-12 sm:col-span-8">
@@ -178,7 +178,7 @@ export default function HomePage() {
         {/* SERVICIOS */}
         <section aria-labelledby="services-title">
           <div className="py-[80px] sm:py-[160px] max-w-[1200px] w-full mx-auto grid grid-cols-12 gap-[24px] px-6 sm:px-0">
-            <div className="col-span-12 sm:col-span-4 text-[16px] font-medium">
+            <div className="col-span-12 sm:col-span-4 text-[16px] ">
               <h2 id="services-title">Servicios</h2>
             </div>
             <div className="col-span-12 sm:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-[24px]">
@@ -233,7 +233,7 @@ export default function HomePage() {
         {/* CTA */}
         <section id="call-to-action" aria-labelledby="cta-title">
           <div className="py-[80px] sm:py-[160px] max-w-[1200px] w-full mx-auto grid grid-cols-12 gap-[24px] px-6 sm:px-0">
-            <div className="col-span-12 sm:col-span-4 text-[16px] font-medium">
+            <div className="col-span-12 sm:col-span-4 text-[16px]">
               <h2 id="cta-title">Empezar proyecto</h2>
             </div>
             <div className="col-span-12 sm:col-span-6 flex flex-col gap-6 items-start">

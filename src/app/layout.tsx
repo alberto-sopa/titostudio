@@ -15,13 +15,28 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    url: "https://tito.studio/",
+    url: "https://tito.studio",
     title: "Tito Studio — Lanzamos tu MVP en 4 semanas",
     description:
       "UX/UI, MVPs y estrategia de producto. Rápido, honesto y sin rodeos.",
     siteName: "Tito Studio",
+    images: [
+      {
+        url: "https://tito.studio/og-image.jpg", // 👉 sube una imagen a /public
+        width: 1200,
+        height: 630,
+        alt: "Tito Studio — MVPs en 4 semanas",
+      },
+    ],
   },
-  twitter: { card: "summary_large_image", creator: "@tito_studio" },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@alberto_work", // si tienes Twitter
+    title: "Tito Studio — Lanzamos tu MVP en 4 semanas",
+    description:
+      "Creamos MVPs para startups en 4 semanas con UX/UI, desarrollo y estrategia de producto.",
+    images: ["https://tito.studio/og-image.jpg"],
+  },
   icons: { icon: "/favicon.ico" },
 };
 
