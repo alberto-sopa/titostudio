@@ -40,13 +40,13 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from: "Tito Studio <hello@tito.studio>", // usa tu dominio verificado en Resend
       to: "alberto@heysopa.com",
-      reply_to: email, // para poder responder directo
+      replyTo: email, // para poder responder directo
       subject,
       text,
     });
 
     return Response.json({ ok: true });
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error(err);
     return Response.json({ ok: false, error: "Email failed" }, { status: 500 });
   }
