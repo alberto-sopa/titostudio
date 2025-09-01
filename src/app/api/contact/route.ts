@@ -1,9 +1,17 @@
 import { NextRequest } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic"; // opcional, por si acaso
 
-// Util por si alguien hace GET
+// ✅ no instanciar aquí: const resend = new Resend(...)
+
+function getResend() {
+  const key = process.env.RESEND_API_KEY;
+  if (!key) throw new Error("RESEND_API_KEY is not set");
+  return new Resend(key);
+}
+
 export async function GET() {
   return Response.json({ ok: true });
 }
@@ -12,9 +20,7 @@ export async function POST(req: NextRequest) {
   try {
     const { name, email, company, budget, message, website, tz } =
       await req.json();
-
-    // Honeypot (spam) — si viene relleno, ignoramos
-    if (website) return Response.json({ ok: true });
+    if (website) return Response.json({ ok: true }); // honeypot
 
     if (!name || !email) {
       return Response.json(
@@ -37,10 +43,12 @@ export async function POST(req: NextRequest) {
       .filter(Boolean)
       .join("\n");
 
+    // ✅ Instanciar aquí, en runtime
+    const resend = getResend();
     await resend.emails.send({
-      from: "Tito Studio <hello@tito.studio>", // usa tu dominio verificado en Resend
+      from: "Tito Studio <hello@tito.studio>", // dominio verificado en Resend
       to: "alberto@heysopa.com",
-      replyTo: email, // para poder responder directo
+      replyTo: email, // <-- usa replyTo (no reply_to)
       subject,
       text,
     });
@@ -48,6 +56,7 @@ export async function POST(req: NextRequest) {
     return Response.json({ ok: true });
   } catch (err: unknown) {
     console.error(err);
-    return Response.json({ ok: false, error: "Email failed" }, { status: 500 });
+    const msg = err instanceof Error ? err.message : "Email failed";
+    return Response.json({ ok: false, error: msg }, { status: 500 });
   }
 }
