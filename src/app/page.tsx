@@ -86,10 +86,10 @@ export default function HomePage() {
         {/* QUOTE / BG */}
         <section id="quote" aria-labelledby="quote-title" className="px-[16px]">
           <div className="bg-[url('/background.png')] bg-cover bg-center max-w-[1200px] rounded-[8px] overflow-hidden mx-auto">
-            <div className="flex flex-col bg-[#00000020] mx-auto justify-center items-center sm:py-[140px] py-[80px] sm:px-6 px-[16px]">
+            <div className="flex flex-col bg-[#00000040] mx-auto justify-center items-center sm:py-[140px] py-[80px] sm:px-6 px-[16px]">
               <h2
                 id="quote-title"
-                className="text-[22px] sm:text-[24px] text-white max-w-[680px] text-left"
+                className="text-[22px] sm:text-[24px] text-white max-w-[680px] sm:text-center text-left"
               >
                 ¿Tienes una idea pero no sabes cómo convertirla en producto? En
                 Tito Studio te acompañamos desde la validación hasta tu MVP
